@@ -1,0 +1,7 @@
+---
+# file: roles/kubernetes/tasks/main.yml
+- name: package update
+  yum: name=* state=latest
+
+- name: kubernetes install
+  yum: name=kubernetes state=latest enablerepo=extras
